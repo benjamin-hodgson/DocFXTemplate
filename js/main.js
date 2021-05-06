@@ -75,7 +75,7 @@ $(document).ready(() => {
 
         let indexReady = false;
 
-        const worker = new Worker('search-worker.js');
+        const worker = new Worker('js/search-worker.js');
         worker.onmessage = function (oEvent) {
             switch (oEvent.data.e) {
                 case 'index-ready':
