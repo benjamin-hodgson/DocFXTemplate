@@ -1,0 +1,19 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+{{!master(layout/_master.tmpl)}}
+
+<article class="col">
+    {{#isNamespace}}
+        {{>partials/namespace}}
+    {{/isNamespace}}
+    {{#isClass}}
+        {{>partials/class}}
+    {{/isClass}}
+    {{#isEnum}}
+        {{>partials/enum}}
+    {{/isEnum}}
+    {{>partials/customMREFContent}}
+</article>
+
+<div class="col col-sm sticky md:hide">
+    {{>partials/localToc}}
+</div>

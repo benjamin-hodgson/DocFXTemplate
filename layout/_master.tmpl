@@ -1,0 +1,34 @@
+{{!include(/^css/.*/)}}
+{{!include(/^js/.*/)}}
+{{!include(favicon.ico)}}
+{{!include(logo.svg)}}
+{{!include(search-stopwords.json)}}
+<!DOCTYPE html>
+<html>
+    {{>partials/head}}
+    <body>
+        <header class="row-space">
+            {{>partials/header}}
+        </header>
+
+        <div id="search-results" class="centre">
+            
+        </div>
+
+        <main class="columns hide-when-search">
+            <div class="col col-md">
+                {{>partials/toc}}
+            </div>
+
+            <div class="col columns">
+                {{!body}}
+            </div>
+        </main>
+
+        <footer class="row-space">
+            {{>partials/footer}}
+        </footer>
+
+        {{>partials/scripts}}
+    </body>
+</html>

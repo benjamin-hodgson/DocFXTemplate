@@ -1,0 +1,18 @@
+<ul id="toc{{path}}" class="{{#active}}active active-i{{/active}}">
+    {{#items}}
+        <li>
+            {{^leaf}}
+                <button type="button" class="link expander {{#active}}active active-i{{/active}} js-expander" aria-controls="toc{{path}}"></button>
+            {{/leaf}}
+            {{#href}}
+                <a href="{{href}}" title="{{name}}" class="{{#active}}active active-i{{/active}}">{{name}}</a>
+            {{/href}}
+            {{^href}}
+                <a href class="{{#active}}active active-i{{/active}}">{{name}}</a>
+            {{/href}}
+            {{^leaf}}
+                {{>partials/tocItem}}
+            {{/leaf}}
+        </li>
+    {{/items}}
+</ul>

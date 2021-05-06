@@ -1,0 +1,4 @@
+<h1 class="title">{{_appTitle}}</h1>
+<form role="search">
+    <input type="text" id="search" placeholder="Search" autocomplete="off" />
+</form>

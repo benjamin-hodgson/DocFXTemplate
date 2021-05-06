@@ -1,0 +1,25 @@
+<h5>{{__global.inThisArticle}}</h5>
+<nav id="local-toc">
+    <ul class="active">
+        <li>
+            <a class="active" href="#{{id}}">{{>partials/title}}</a>
+            <ul class="active">
+                {{#children}}
+                    <li>
+                        <a href="#{{id}}">{{>partials/classSubtitle}}</a>
+
+                        {{#children.0}}
+                        <ul>
+                            {{/children.0}}
+                            {{#children}}
+                                <li><a href="#{{id}}">{{name.0.value}}</a></li>
+                            {{/children}}
+                            {{#children.0}}
+                        </ul>
+                        {{/children.0}}
+                    </li>
+                {{/children}}
+            </ul>
+        </li>
+    </ul>
+</nav>

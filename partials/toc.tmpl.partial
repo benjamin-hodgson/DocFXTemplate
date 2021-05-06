@@ -1,0 +1,11 @@
+<button type="button" class="sm:block centre js-expander" aria-controls="toc">{{__global.tocToggleButton}}</button>
+<nav id="toc" class="sticky sm:hide">
+    <form>
+        <input id="toc-filter" type="text" placeholder="Enter here to filter..." />
+    </form>
+    {{#_toc}}
+        {{^leaf}}
+            {{>partials/tocItem}}
+        {{/leaf}}   
+    {{/_toc}}
+</nav>

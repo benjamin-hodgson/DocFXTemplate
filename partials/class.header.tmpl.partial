@@ -1,0 +1,78 @@
+<h1 id="{{id}}"><a href="#{{id}}">{{>partials/title}}</a></h1>
+<div>{{{summary}}}</div>
+{{#inClass}}
+    <h5>{{__global.inheritance}}</h5>
+    <ul>
+        {{#inheritance}}
+            <li>{{{specName.0.value}}}</li>
+        {{/inheritance}}
+        <li>{{name.0.value}}</li>
+        {{#derivedClasses}}
+            <li>{{{specName.0.value}}}</li>
+        {{/derivedClasses}}
+    </ul>
+{{/inClass}}
+{{#implements.0}}
+    <h5>{{__global.implements}}</h5>
+    <ul>
+    {{/implements.0}}
+        {{#implements}}
+            <li>{{{specName.0.value}}}</li>
+        {{/implements}}
+    {{#implements.0}}
+    </ul>
+{{/implements.0}}
+
+{{#inheritedMembers.0}}
+    <h5>{{__global.inheritedMembers}}</h5>
+    <ul>
+    {{/inheritedMembers.0}}
+        {{#inheritedMembers}}
+            <li>
+                {{#definition}}
+                    <xref uid="{{definition}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
+                {{/definition}}
+                {{^definition}}
+                    <xref uid="{{uid}}" text="{{nameWithType.0.value}}" alt="{{fullName.0.value}}"/>
+                {{/definition}}
+            </li>
+        {{/inheritedMembers}}
+    {{#inheritedMembers.0}}
+    </ul>
+{{/inheritedMembers.0}}
+
+<h5>{{__global.declaration}}</h5>
+<pre><code class="lang-{{_lang}} hljs">{{syntax.content.0.value}}</code></pre>
+{{#syntax.typeParameters.0}}
+    <h5>{{__global.typeParameters}}</h5>
+    <table>
+        <thead>
+            <tr>
+                <th>{{__global.name}}</th>
+                <th>{{__global.description}}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{/syntax.typeParameters.0}}
+            {{#syntax.typeParameters}}
+                <tr>
+                    <td><p>{{{id}}}</p></td>
+                    <td>{{{description}}}</td>
+                </tr>
+            {{/syntax.typeParameters}}
+        {{#syntax.typeParameters.0}}
+        </tbody>
+    </table>
+{{/syntax.typeParameters.0}}
+
+{{#remarks}}
+    <h5><strong>{{__global.remarks}}</strong></h5>
+    <div>{{{remarks}}}</div>
+{{/remarks}}
+
+{{#example.0}}
+    <h5><strong>{{__global.examples}}</strong></h5>
+{{/example.0}}
+{{#example}}
+    {{{.}}}
+{{/example}}
