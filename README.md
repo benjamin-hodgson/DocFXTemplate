@@ -1,1 +1,1 @@
-Forked from DocFX's bundled default template
+# Moved [here](https://github.com/benjamin-hodgson/BuildScripts/tree/main/Benjamin.Pizza.BuildScripts/build/DocFXTemplate)
